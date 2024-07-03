@@ -1,0 +1,21 @@
+/* GLOBAL */
+@import "global/variables";
+@import "global/global";
+@import "global/fonts";
+
+/* BLOCKS */
+@import "blocks/page";
+@import "blocks/visually-hidden";
+@import "blocks/catalog";
+@import "blocks/description";
+@import "blocks/portfolio";
+@import "blocks/container";
+@import "blocks/info";
+@import "blocks/info-list";
+@import "blocks/skills";
+@import "blocks/skills-list";
+@import "blocks/profile";
+@import "blocks/stats";
+@import "blocks/projects";
+@import "blocks/projects-list";
+@import "blocks/animation.scss";

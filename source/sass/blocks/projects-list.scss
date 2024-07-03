@@ -1,0 +1,106 @@
+.projects-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.projects-list__item{
+  color: #FFFFFF;
+  margin: 10px;
+  padding: 10px;
+  @media (min-width: $breakpoint-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    margin-left: -10px;
+  }
+}
+
+.projects-list__image{
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  @media (max-width: $breakpoint-tablet) {
+    height: 120px;
+  }
+}
+
+.projects-list__title{
+  font-family: "Gilroy";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 35px;
+    margin-top: 5px;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 42px;
+  }
+}
+
+.projects-list__description{
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 20px;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 25px;
+  }
+}
+
+
+.projects-list__button{
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: #0047FF;
+  border-radius: 80px;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: .75s;
+  cursor: pointer;
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 auto;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 22px;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 20px;
+  }
+}
+
+.projects-list__button:hover{
+  transition: 0.75s;
+  background-color: #ff7505;
+}
+
+.projects-list__text{
+  @media (max-width: $breakpoint-desktop) {
+    text-align: center;
+  }
+}

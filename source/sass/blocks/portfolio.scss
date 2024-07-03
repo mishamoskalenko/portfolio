@@ -1,0 +1,84 @@
+.portfolio{
+  background-color: #ffffff;
+  border-radius: 32px;
+  width: 100%;
+  transition: 0.75s;
+}
+
+
+.portfolio:hover{
+  background-color: #ff7505;
+  transition: 0.75s;
+  .portfolio__title{
+    transition: 0.75s;
+    color: #000000;
+  }
+  .portfolio__link{
+    color: #000000;
+    transition: 0.75s;
+  }
+}
+
+
+
+.portfolio__container{
+  padding: 16px 34px 32px 32px;
+}
+
+.portfolio__title{
+  font-family: 'Gilroy';
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 150px;
+  transition: 0.75s;
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0px;
+    margin-bottom: 80px;
+    padding-top: 15px;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 21px;
+  }
+  @media (min-width: $breakpoint-desktop) {
+    margin-bottom: 230px;
+    margin-top: 16px;
+  }
+}
+
+.portfolio__title::after{
+  @media (min-width: $breakpoint-mobile) {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    bottom: -14px;
+    background-image: url(../../img/linkedin-1.svg);
+  }
+}
+
+.portfolio__link{
+  font-family: 'Gilroy';
+  font-size: 71px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #0047FF;
+  transition: 0.75s;
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+}
+
+
+

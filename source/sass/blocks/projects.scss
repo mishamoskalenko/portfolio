@@ -1,0 +1,16 @@
+.projects__title{
+  font-family: 'Gilroy';
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  @media (max-width: $breakpoint-desktop) {
+    font-size: 60px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 40px;
+    text-align: center;
+  }
+}

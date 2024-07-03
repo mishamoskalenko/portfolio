@@ -1,0 +1,35 @@
+.profile{
+  background-color: #0047FF;
+  border-radius: 32px;
+}
+
+.profile__title{
+  font-family: 'Gilroy';
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  padding-left: 32px;
+  color: #ffffff;
+  @media (max-width: $breakpoint-desktop) {
+    padding-top: 15px;
+  }
+}
+
+.profile__description{
+  font-family: 'Gilroy';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: #ffffff;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  padding-right: 2px;
+  @media (max-width: $breakpoint-mobile) {
+   text-align: center;
+   padding-left: 5px;
+   padding-right: 5px;
+  }
+}

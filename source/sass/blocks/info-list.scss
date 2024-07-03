@@ -1,0 +1,104 @@
+.info-list__item{
+  text-decoration: none;
+  background-color: #ffffff;
+  border-radius: 80px;
+  padding: 21px 21px 21px 61px;
+  position: relative;
+  transition: 0.75s;
+  cursor: pointer;
+  @media (max-width: $breakpoint-tablet) {
+    padding-right: 2px;
+  }
+  @media (max-width: $breakpoint-desktop) {
+    margin-bottom: 10px;
+  }
+}
+
+.info-list__item--1::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/location.svg);
+}
+
+.info-list__item--2::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/phone.svg);
+}
+
+.info-list__item--3::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/mail.svg);
+}
+
+.info-list__item--4::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/telegram.svg);
+}
+
+.info-list__item--5::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/linkedin.svg);
+}
+
+.info-list__item--6::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 15px;
+  bottom: 13px;
+  background-image: url(../../img/github.svg);
+}
+
+.info-list__link{
+  color: #000000;
+  text-decoration: none;
+}
+
+.info-list__link--mail{
+  text-transform: lowercase;
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+  }
+}
+
+.info-list__item:hover{
+  transition: 0.75s;
+  background-color: #ff7505;
+}

@@ -1,0 +1,8 @@
+.page__body{
+  margin: 0 auto;
+  padding: 54px 0px 47px 0px;
+  background-color: #000000;
+  @media (max-width: $breakpoint-mobile) {
+    padding: 12px 0px 47px 0px;
+  }
+}
