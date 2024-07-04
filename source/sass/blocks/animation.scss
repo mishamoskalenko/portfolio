@@ -1,60 +1,59 @@
-// .catalog__image,
-// .catalog__description,
-// .catalog__portfolio,
-// .info-list__item,
-// .stats__profile,
-// .stats__skills,
-// .projects__title,
-// .projects-list__item{
-//   opacity: 0;
-//   transform: translateY(20px);
-//   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-// }
+.catalog__image,
+.catalog__description,
+.catalog__portfolio,
+.info-list__item,
+.stats__profile,
+.stats__skills,
+.projects__title,
+.projects-list__item{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+.catalog__image--animated {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-// .catalog__image--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-// }
+.catalog__description--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
 
-// .catalog__description--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 0.4s;
-// }
+.catalog__portfolio--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
 
-// .catalog__portfolio--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 0.5s;
-// }
+.info-list__item--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
 
-// .info-list__item--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 0.6s;
-// }
+.stats__profile--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
 
-// .stats__profile--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 0.8s;
-// }
+.stats__skills--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.0s;
+}
 
-// .stats__skills--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 1.0s;
-// }
+.projects__title--animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
 
-// .projects__title--animated {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 1.2s;
-// }
-
-// .projects-list__item--animated{
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition-delay: 0.2s;
-// }
+.projects-list__item--animated{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}

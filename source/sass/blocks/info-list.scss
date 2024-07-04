@@ -2,7 +2,7 @@
   text-decoration: none;
   background-color: #ffffff;
   border-radius: 80px;
-  padding: 21px 21px 21px 61px;
+  padding: 21px 0px 21px 0px;
   position: relative;
   transition: 0.75s;
   cursor: pointer;
@@ -11,6 +11,47 @@
   }
   @media (max-width: $breakpoint-desktop) {
     margin-bottom: 10px;
+  }
+}
+
+.info-list__link{
+  color: #000000;
+  text-decoration: none;
+  padding: 21px 21px 21px 61px;
+  width: 100%;
+}
+
+.info-list__item--1{
+  padding: 21px 21px 21px 61px;
+}
+
+.info-list__link--phone{
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 78px 21px 61px;
+  }
+}
+
+.info-list__link--telegram{
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 128px 21px 61px;
+  }
+}
+
+.info-list__link--linkedin{
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 144px 21px 61px;
+  }
+}
+
+.info-list__link--mail{
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 21px 21px 61px;
+  }
+}
+
+.info-list__link--github{
+  @media (max-width: $breakpoint-tablet) {
+    padding: 21px 155px 21px 61px;
   }
 }
 
@@ -86,11 +127,6 @@
   background-image: url(../../img/github.svg);
 }
 
-.info-list__link{
-  color: #000000;
-  text-decoration: none;
-}
-
 .info-list__link--mail{
   text-transform: lowercase;
   @media (max-width: $breakpoint-mobile) {
@@ -98,7 +134,9 @@
   }
 }
 
-.info-list__item:hover{
-  transition: 0.75s;
-  background-color: #ff7505;
+@media (hover: hover) {
+  .info-list__item:hover{
+    transition: 0.75s;
+    background-color: #ff7505;
+  }
 }

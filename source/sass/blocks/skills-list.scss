@@ -23,7 +23,9 @@
   cursor: pointer;
 }
 
-.skills-list__item:hover{
-  transition: 0.75s;
-  background-color: #ff7505;
+@media (hover: hover) {
+  .skills-list__item:hover{
+    transition: 0.75s;
+    background-color: #ff7505;
+  }
 }

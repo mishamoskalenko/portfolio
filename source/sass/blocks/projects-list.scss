@@ -91,9 +91,11 @@
   }
 }
 
-.projects-list__button:hover{
-  transition: 0.75s;
-  background-color: #ff7505;
+@media (hover: hover) {
+  .projects-list__button:hover{
+    transition: 0.75s;
+    background-color: #ff7505;
+  }
 }
 
 .projects-list__text{
@@ -101,3 +103,4 @@
     text-align: center;
   }
 }
+
