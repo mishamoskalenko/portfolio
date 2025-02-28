@@ -21,7 +21,13 @@
 .projects-list__image{
   border-radius: 20px;
   width: 100%;
-  height: auto;
+  height: 350px;
+  @media (max-width: $breakpoint-mobile) {
+    height: 125px;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    height: 350px;
+  }
 }
 
 .projects-list__title{
