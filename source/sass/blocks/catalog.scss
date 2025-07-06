@@ -42,7 +42,7 @@
 }
 
 .catalog__portfolio{
-  @media (max-width: $breakpoint-desktop) {
+  @media (max-width: ($breakpoint-desktop - 1px)) {
     grid-column: 1/3;
   }
 }
