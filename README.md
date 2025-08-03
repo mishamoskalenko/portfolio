@@ -1,4 +1,4 @@
-View portfolio - https://mishamoskalenko.github.io/portfolio
+View portfolio - https://mishamoskalenko.vercel.app
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
