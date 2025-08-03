@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .stats{
   @media (min-width: $breakpoint-desktop) {
     display: grid;

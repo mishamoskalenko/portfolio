@@ -1,0 +1,21 @@
+/* GLOBAL */
+@use "global/variables" as *;
+@use "global/global" as *;
+@use "global/fonts" as *;
+
+/* BLOCKS */
+@use "blocks/page" as *;
+@use "blocks/visually-hidden" as *;
+@use "blocks/catalog" as *;
+@use "blocks/description" as *;
+@use "blocks/portfolio" as *;
+@use "blocks/container" as *;
+@use "blocks/info" as *;
+@use "blocks/info-list" as *;
+@use "blocks/skills" as *;
+@use "blocks/skills-list" as *;
+@use "blocks/profile" as *;
+@use "blocks/stats" as *;
+@use "blocks/projects" as *;
+@use "blocks/projects-list" as *;
+@use "blocks/animation" as *;
