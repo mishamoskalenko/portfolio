@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .portfolio{
   background-color: #ffffff;
   border-radius: 32px;
@@ -59,7 +61,7 @@
     background-size: contain;
     right: 0;
     bottom: -14px;
-    background-image: url(../../img/linkedin-1.svg);
+    background-image: url(/linkedin-1.svg);
   }
 }
 

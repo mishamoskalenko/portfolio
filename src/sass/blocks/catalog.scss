@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .catalog{
   @media (min-width: $breakpoint-tablet) {
     display: grid;
@@ -14,7 +16,6 @@
 }
 
 .catalog__image{
-  width: 100%;
   border-radius: 32px;
   background-color: #0047FF;
   transition: 1s;
@@ -24,7 +25,6 @@
 }
 
 .catalog__image:hover{
-  width: 100%;
   border-radius: 32px;
   background-color: #ff7505;
   transition: 1s;
@@ -32,8 +32,7 @@
 
 
 .catalog__image img{
-  width: 100%;
-  margin-top: 47px;
+  margin-top: 48px;
   border-radius: 5%;
   @media (max-width: $breakpoint-mobile) {
     margin-top: 0;
