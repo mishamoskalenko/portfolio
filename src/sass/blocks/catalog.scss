@@ -9,7 +9,8 @@
   }
   @media (min-width: $breakpoint-desktop) {
     display: grid;
-    grid-template-columns: 337px 448px 645px;
+    grid-template-columns: 337px 420px 625px;
+    justify-content: center;
     grid-template-rows: 428px;
     gap: 8px;
   }
@@ -24,11 +25,11 @@
   }
 }
 
-.catalog__image:hover{
-  border-radius: 32px;
-  background-color: #ff7505;
-  transition: 1s;
-}
+// .catalog__image:hover{
+//   border-radius: 32px;
+//   background-color: #ff7505;
+//   transition: 1s;
+// }
 
 
 .catalog__image img{
