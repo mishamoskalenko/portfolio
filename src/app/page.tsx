@@ -1,22 +1,21 @@
 "use client";
 import Image from "next/image";
 import { useEffect } from "react";
+import { ProjectItem } from "./ui/ProjectItem/ProjectItem";
+import { ContactItem } from "./ui/ContactItem/ContactItem";
 
 export default function Home() {
   useEffect(() => {
     const initAnimations = () => {
       const animatedElements = document.querySelectorAll('[data-animate]');
-      console.log('React useEffect - Found animated elements:', animatedElements.length);
 
       if (animatedElements.length === 0) {
-        console.log('No animated elements found - this might be the issue');
         return;
       }
 
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log('Element intersecting:', entry.target);
             const el = entry.target;
             const isStaggered = el.hasAttribute('data-stagger');
             const index = Number((el as HTMLElement).dataset.index || 0);
@@ -24,13 +23,12 @@ export default function Home() {
 
             setTimeout(() => {
               el.classList.add('is-animated');
-              console.log('Added is-animated class to:', el);
             }, delay);
 
             obs.unobserve(el);
           }
         });
-      }, { 
+      }, {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
       });
@@ -57,7 +55,7 @@ export default function Home() {
       <header className="page__header header">
         <div className="header__catalog catalog">
           <div className="catalog__image" data-animate>
-            <Image src="/avatar.png" alt="Mykhailo Moskalenko's avatar" width={337} height={380} priority  />
+            <Image src="/avatar.png" alt="Mykhailo Moskalenko's avatar" width={337} height={380} priority />
           </div>
           <div className="catalog__description description" data-animate>
             <div className="description__container">
@@ -68,46 +66,31 @@ export default function Home() {
           <div className="catalog__portfolio portfolio" data-animate>
             <div className="portfolio__container">
               <p className="portfolio__title">Resume</p>
-              <a className="portfolio__link" href="https://www.linkedin.com/in/misha-moskalenko/" target="_blank"
-                rel="noopener noreferrer">LinkedIn</a>
+              <a className="portfolio__link" href="Mykhailo_Moskalenko_CV.pdf" target="_blank"
+                rel="noopener noreferrer">View Resume</a>
             </div>
           </div>
         </div>
       </header>
       <main className="page__main info container">
         <h1 className="info__title">Mykhailo Moskalenko</h1>
-        <ul className="info__list info-list">
-          <li className="info-list__item info-list__item--1" data-animate data-stagger>France</li>
-          <li className="info-list__item info-list__item--2" data-animate data-stagger><a
-            className="info-list__link info-list__link--phone" href="tel:+33780450793" target="_blank"
-            rel="noopener noreferrer">+33 (7) 80 45 07 93</a>
-          </li>
-          <li className="info-list__item info-list__item--6" data-animate data-stagger>
-            <a className="info-list__link info-list__link--github" href="https://github.com/mishamoskalenko" target="_blank"
-              rel="noopener noreferrer">GitHub</a>
-          </li>
-          <li className="info-list__item info-list__item--5" data-animate data-stagger>
-            <a className="info-list__link info-list__link--linkedin" href="https://www.linkedin.com/in/misha-moskalenko/"
-              target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </li>
-          <li className="info-list__item info-list__item--4" data-animate data-stagger>
-            <a className="info-list__link info-list__link--telegram" href="https://t.me/mishanyyyaaa" target="_blank"
-              rel="noopener noreferrer">Telegram</a>
-          </li>
-          <li className="info-list__item info-list__item--3" data-animate data-stagger>
-            <a className="info-list__link info-list__link--mail" href="mailto:misamoskalenko318@gmail.com" target="_blank"
-              rel="noopener noreferrer">misamoskalenko318@gmail.com</a>
-          </li>
+        <ul className="info__list">
+          <ContactItem text={"Rouen, France"} image={"/location.svg"} />
+          <ContactItem text={"+33 (7) 80 45 07 93"} image={"/phone.svg"} href="tel:+33780450793" />
+          <ContactItem text={"GitHub"} image={"/github.svg"} href="https://github.com/mishamoskalenko" />
+          <ContactItem text={"LinkedIn"} image={"/linkedin.svg"} href="https://www.linkedin.com/in/mykhailo-moskalenko" />
+          <ContactItem text={"misamoskalenko318@gmail.com"} image={"/mail.svg"} />
         </ul>
         <section className="page__section stats">
           <div className="stats__profile profile" data-animate>
             <h2 className="profile__title">Profile</h2>
-            <p className="profile__description">Hello, I am a frontend developer with experience in HTML, CSS, JavaScript, and
-              React. I constantly work on my skills by creating my own projects and participating in various web
-              development-related groups. <br></br>During my studies, I have created several projects such as a website about
-              cryptocurrencies where I used React, React Router, SCSS, and Axios. I also made a task scheduling calendar
-              using React, Typescript, Redux Toolkit, React Router, Axios, and Ant design. In addition, right now I am
-              participating in a collaborative learning group on algorithms and web development.</p>
+            <p className="profile__description">
+              I am a frontend developer and recent graduate software engineering student with experience in building React web applications, solving algorithmic challenges, and working in collaborative development teams.
+              <br></br>
+              In each project, I focused on clean architecture, efficient state management, and user-friendly interfaces. I also enjoy competitive programming and was a top participant in the Algorithms Olympiad.
+              <br></br>
+              I am actively seeking an internship or junior frontend developer roles to contribute to projects and further expand my expertise in web development.
+            </p>
           </div>
           <div className="stats__skills skills" data-animate>
             <h2 className="skills__title">Skills</h2>
@@ -142,76 +125,48 @@ export default function Home() {
         <section className="page__section projects">
           <h2 className="projects__title" data-animate>My projects</h2>
           <ul className="projects__list projects-list">
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/blogging-platform.png" alt="Screenshot of the main page of the 'Blogging platform' web application." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Blogging platform</h3>
-                <p className="projects-list__description">Blogging platform web application using React, TypeScript, Redux
-                  Toolkit(RTK Query), React Router, Axios, SCSS Modules, i18next, Headless UI, Webpack, Vite, Storybook,
-                  Jest, React Testing Library & Cypress</p>
-                <a className="projects-list__button" href="https://mishablogging-platform.netlify.app" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/calendar.png" alt="Screenshot of the 'Calendar' web application, showing a grid of events." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Calendar</h3>
-                <p className="projects-list__description">Calendar web application using React, Typescript, Redux Toolkit, React
-                  Router, Axios, Ant design</p>
-                <a className="projects-list__button" href="https://mishamoskalenko.github.io/calendar" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/cryptopin.png" alt="Screenshot of the 'Cryptopin' website, displaying a list of cryptocurrencies with their prices." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Cryptopin</h3>
-                <p className="projects-list__description">Cryptocurrency website with token tracker using React, React Router,
-                  Axios</p>
-                <a className="projects-list__button" href="https://mishamoskalenko.github.io/cryptopin" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/weather.png" alt="Screenshot of the 'Weather app', showing the weather forecast for a specific city." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Weather app</h3>
-                <p className="projects-list__description">Find out the weather app using React, Axios</p>
-                <a className="projects-list__button" href="https://mishamoskalenko.github.io/weather-app" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/drink.png" alt="Screenshot of the 'Drink' website, a landing page for selling coffee drinks." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Drink</h3>
-                <p className="projects-list__description">Selling coffee drinks website using Html, Scss, Gulp</p>
-                <a className="projects-list__button" href="https://mishamoskalenko.github.io/Drink" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
-            <li className="projects-list__item" data-animate data-stagger>
-              <div>
-                <Image className="projects-list__image" src="/cat.png" alt="Screenshot of the 'Cat energy' website, a landing page for selling cat food." width={702.5} height={350} />
-              </div>
-              <div className="projects-list__text">
-                <h3 className="projects-list__title">Cat energy</h3>
-                <p className="projects-list__description">Selling cat food website using Html, Scss, Gulp</p>
-                <a className="projects-list__button" href="https://mishamoskalenko.github.io/cat-energy" target="_blank"
-                  rel="noopener noreferrer">View</a>
-              </div>
-            </li>
+            <ProjectItem
+              title={"Blogging platform"}
+              description={"Blogging platform web application using React, TypeScript, Redux Toolkit(RTK Query), React Router, Axios, SCSS Modules, i18next, Headless UI, Webpack, Vite, Storybook, Jest, React Testing Library & Cypress"}
+              image={"/blogging-platform.png"}
+              alt={"Screenshot of the main page of the 'Blogging platform' web application."}
+              href={'https://mishablogging-platform.netlify.app'}
+            />
+            <ProjectItem
+              title={"Calendar"}
+              description={"Calendar web application using React, Typescript, Redux Toolkit, React Router, Axios, Ant design"}
+              image={"/calendar.png"}
+              alt={"Screenshot of the 'Calendar' web application, showing a grid of events."}
+              href={'https://mishamoskalenko.github.io/calendar'}
+            />
+            <ProjectItem
+              title={"Cryptopin"}
+              description={"Cryptocurrency website with token tracker using React, React Router, Axios"}
+              image={"/cryptopin.png"}
+              alt={"Screenshot of the 'Cryptopin' website, displaying a list of cryptocurrencies with their prices."}
+              href={'https://mishamoskalenko.github.io/cryptopin'}
+            />
+            <ProjectItem
+              title={"Weather app"}
+              description={"Find out the weather app using React, Axios"}
+              image={"/weather.png"}
+              alt={"Screenshot of the 'Weather app', showing the weather forecast for a specific city."}
+              href={'https://mishamoskalenko.github.io/weather-app'}
+            />
+            <ProjectItem
+              title={"Drink"}
+              description={"Selling coffee drinks website using HTML, SCSS, Gulp"}
+              image={"/drink.png"}
+              alt={"Screenshot of the 'Drink' website, a landing page for selling coffee drinks."}
+              href={'https://mishamoskalenko.github.io/Drink'}
+            />
+            <ProjectItem
+              title={"Cat energy"}
+              description={"Selling cat food website using HTML, SCSS, Gulp"}
+              image={"/cat.png"}
+              alt={"Screenshot of the 'Cat energy' website, a landing page for selling cat food."}
+              href={'https://mishamoskalenko.github.io/cat-energy'}
+            />
           </ul>
         </section>
       </main>

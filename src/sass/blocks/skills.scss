@@ -3,6 +3,8 @@
 .skills{
   background-color: #FFFFFF;
   border-radius: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .skills__title{
@@ -15,6 +17,6 @@
   color:#000000;
   padding-left: 32px;
   @media (max-width: $breakpoint-desktop) {
-    padding-top: 15px;
+    margin-top: 15px;
   }
 }

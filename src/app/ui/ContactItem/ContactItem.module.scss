@@ -1,0 +1,36 @@
+@use "../../../sass/global/variables.scss" as *;
+
+.info_item{
+  text-decoration: none;
+  background-color: #ffffff;
+  border-radius: 80px;
+  position: relative;
+  transition: 0.75s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 5px 15px;
+  @media (max-width: $breakpoint-tablet) {
+    padding-right: 2px;
+  }
+  @media (max-width: $breakpoint-desktop) {
+    margin-bottom: 10px;
+  }
+}
+
+.info_item:hover{
+  transition: 0.3s;
+  background-color: #dadada;
+}
+
+.info_link{
+  color: #000000;
+  text-decoration: none;
+}
+
+.info_text{
+  color: #000000;
+  text-decoration: none;
+  width: 100%;
+}

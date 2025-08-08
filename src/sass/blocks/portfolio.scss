@@ -7,28 +7,13 @@
   transition: 0.75s;
 }
 
-
-// .portfolio:hover{
-//   background-color: #ff7505;
-//   transition: 0.75s;
-//   .portfolio__title{
-//     transition: 0.75s;
-//     color: #000000;
-//   }
-//   .portfolio__link{
-//     color: #000000;
-//     transition: 0.75s;
-//   }
-// }
-
-
 .portfolio__container{
   padding: 16px 34px 32px 32px;
 }
 
 .portfolio__title{
   font-family: 'Gilroy';
-  font-size: 42px;
+  font-size: 65px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
@@ -38,29 +23,29 @@
   transition: 0.75s;
   @media (max-width: $breakpoint-mobile) {
     margin-top: 0px;
-    margin-bottom: 80px;
-    padding-top: 15px;
+    margin-bottom: 113px;
+    font-size: 42px;
   }
   @media (min-width: $breakpoint-tablet) {
-    margin-top: 21px;
+    margin-top: 0px;
   }
   @media (min-width: $breakpoint-desktop) {
     margin-bottom: 230px;
-    margin-top: 16px;
+    margin-top: 5px;
   }
 }
 
 .portfolio__title::after{
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-tablet) {
     content: "";
     position: absolute;
-    width: 110px;
+    width: 100px;
     height: 100px;
     background-repeat: no-repeat;
     background-size: contain;
-    right: 0;
+    right: -30px;
     bottom: -14px;
-    background-image: url(/linkedin-1.svg);
+    background-image: url(/resume.svg);
   }
 }
 
@@ -75,7 +60,7 @@
   color: #0047FF;
   transition: 0.75s;
   @media (max-width: $breakpoint-mobile) {
-    font-size: 50px;
+    font-size: 33px;
     text-align: center;
     padding-bottom: 25px;
   }
