@@ -1,11 +1,18 @@
+@use "../global/variables" as *;
+
 .skills-list{
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 5px;
   padding-bottom: 32px;
   padding-left: 30px;
   padding-right: 29px;
+  @media (max-width: $breakpoint-mobile) {
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 4px;
+  }
 }
 
 .skills-list__item{

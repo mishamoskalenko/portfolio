@@ -14,6 +14,11 @@
   text-transform: uppercase;
   padding-left: 32px;
   color: #ffffff;
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
   @media (max-width: $breakpoint-desktop) {
     padding-top: 15px;
   }

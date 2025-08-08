@@ -76,7 +76,7 @@ export default function Home() {
         <h1 className="info__title">Mykhailo Moskalenko</h1>
         <ul className="info__list">
           <ContactItem text={"Rouen, France"} image={"/location.svg"} />
-          <ContactItem text={"+33 (7) 80 45 07 93"} image={"/phone.svg"} href="tel:+33780450793" />
+          <ContactItem text={"+33 7 80 45 07 93"} image={"/phone.svg"} />
           <ContactItem text={"GitHub"} image={"/github.svg"} href="https://github.com/mishamoskalenko" />
           <ContactItem text={"LinkedIn"} image={"/linkedin.svg"} href="https://www.linkedin.com/in/mykhailo-moskalenko" />
           <ContactItem text={"misamoskalenko318@gmail.com"} image={"/mail.svg"} />
@@ -112,8 +112,8 @@ export default function Home() {
               <li className="skills-list__item">Jest</li>
               <li className="skills-list__item">RTL</li>
               <li className="skills-list__item">Cypress</li>
-              <li className="skills-list__item">Storybook</li>
               <li className="skills-list__item">Loki</li>
+              <li className="skills-list__item">Storybook</li>
               <li className="skills-list__item">GitHub</li>
               <li className="skills-list__item">GitHub Actions</li>
               <li className="skills-list__item">ESLint</li>
