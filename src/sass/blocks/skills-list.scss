@@ -26,7 +26,9 @@
   background-color: #000000;
   border-radius: 80px;
   padding: 12px 15px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 @media (hover: hover) {
