@@ -39,7 +39,6 @@ export default function Home() {
           (el as HTMLElement).dataset.index = siblings.indexOf(el).toString();
         }
         observer.observe(el);
-        console.log('Observing element:', el);
       });
     };
 
@@ -50,12 +49,16 @@ export default function Home() {
     }
   }, []);
 
+  const skills = [
+    "HTML", "CSS", "SCSS", "JavaScript", "Typescript", "React", "React Router", "Redux Toolkit", "GIT", "Axios", "Webpack", "Vite", "i18n", "Babel", "Jest", "RTL", "Cypress", "Loki", "Storybook", "GitHub", "GitHub Actions", "ESLint", "Stylelint", "English(B2)"
+  ]
+
   return (
     <div className="page__body container">
       <header className="page__header header">
         <div className="header__catalog catalog">
           <div className="catalog__image" data-animate>
-            <Image src="/avatar.png" alt="Mykhailo Moskalenko's avatar" width={337} height={380} priority />
+            <Image src="/avatar-1.png" alt="Mykhailo Moskalenko's avatar" width={750} height={750} priority />
           </div>
           <div className="catalog__description description" data-animate>
             <div className="description__container">
@@ -95,30 +98,9 @@ export default function Home() {
           <div className="stats__skills skills" data-animate>
             <h2 className="skills__title">Skills</h2>
             <ul className="skills__list skills-list">
-              <li className="skills-list__item">HTML</li>
-              <li className="skills-list__item">CSS</li>
-              <li className="skills-list__item">SCSS</li>
-              <li className="skills-list__item">JavaScript</li>
-              <li className="skills-list__item">Typescript</li>
-              <li className="skills-list__item">React</li>
-              <li className="skills-list__item">React Router</li>
-              <li className="skills-list__item">Redux Toolkit</li>
-              <li className="skills-list__item">GIT</li>
-              <li className="skills-list__item">Axios</li>
-              <li className="skills-list__item">Webpack</li>
-              <li className="skills-list__item">Vite</li>
-              <li className="skills-list__item">i18n</li>
-              <li className="skills-list__item">Babel</li>
-              <li className="skills-list__item">Jest</li>
-              <li className="skills-list__item">RTL</li>
-              <li className="skills-list__item">Cypress</li>
-              <li className="skills-list__item">Loki</li>
-              <li className="skills-list__item">Storybook</li>
-              <li className="skills-list__item">GitHub</li>
-              <li className="skills-list__item">GitHub Actions</li>
-              <li className="skills-list__item">ESLint</li>
-              <li className="skills-list__item">Stylelint</li>
-              <li className="skills-list__item">English (B2) </li>
+              {skills.map((item, index) => (
+                <li className="skills-list__item" key={index}>{item}</li>
+              ))}
             </ul>
           </div>
         </section>

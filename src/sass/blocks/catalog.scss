@@ -19,17 +19,23 @@
 .catalog__image{
   border-radius: 32px;
   background-color: #0047FF;
+  position: relative;
+  overflow: hidden;
   @media (max-width: $breakpoint-mobile) {
     height: 313px;
   }
 }
 
 .catalog__image img{
-  margin-top: 48px;
-  border-radius: 5%;
+  max-width: none;
+  position: absolute;
+  bottom: 0px;
+  right: -190px;
   @media (max-width: $breakpoint-mobile) {
+    width: 600px;
     margin-top: 0;
     border-radius: 10px;
+    right: -150px;
   }
 }
 
