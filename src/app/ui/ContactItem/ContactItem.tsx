@@ -25,7 +25,7 @@ export const ContactItem = (props: ContactItemProps) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15, margin: "0px 0px -5% 0px" }}
-            whileHover={{ y: -2 }}
+            whileHover={{ y: -4, transition: { duration: 0.1 } }}
             transition={{ duration: 0.3, delay }}
             style={{ willChange: "transform, opacity", backfaceVisibility: "hidden" }}
         >

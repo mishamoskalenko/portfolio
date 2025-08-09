@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ProjectItem } from "./ui/ProjectItem/ProjectItem";
 import { ContactItem } from "./ui/ContactItem/ContactItem";
 import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
 
 export default function Home() {
   const skills = [
@@ -19,7 +20,7 @@ export default function Home() {
           <motion.div className="catalog__description description" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.2 }}>
             <div className="description__container">
               <h2 className="description__title">Frontend Developer</h2>
-              <p className="description__subtitle">simple, stylish and logical</p>
+              <ReactTyped className="description__subtitle" typeSpeed={60} strings={["simple, stylish and logical",]} />
             </div>
           </motion.div>
           <motion.div className="catalog__portfolio portfolio" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -51,7 +52,7 @@ export default function Home() {
               I am actively seeking an internship or junior frontend developer roles to contribute to projects and further expand my expertise in web development.
             </p>
           </motion.div>
-          <motion.div className="stats__skills skills" initial={{ opacity: 0, y: 24 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} style={{ willChange: "transform, opacity"}}>
+          <motion.div className="stats__skills skills" initial={{ opacity: 0, y: 24 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} style={{ willChange: "transform, opacity" }}>
             <h2 className="skills__title">Skills</h2>
             <ul className="skills__list skills-list">
               {skills.map((item, index) => (
@@ -71,15 +72,16 @@ export default function Home() {
             </ul>
           </motion.div>
         </section>
-        <section className="page__section projects">
+        <section className="projects">
           <h2 className="projects__title">My projects</h2>
-          <ul className="projects__list projects-list">
+          <ul className="projects__list">
             <ProjectItem
               title={"Blogging platform"}
               description={"Blogging platform web application using React, TypeScript, Redux Toolkit(RTK Query), React Router, Axios, SCSS Modules, i18next, Headless UI, Webpack, Vite, Storybook, Jest, React Testing Library & Cypress"}
               image={"/blogging-platform.png"}
               alt={"Screenshot of the main page of the 'Blogging platform' web application."}
               href={'https://mishablogging-platform.netlify.app'}
+              gitHubHref={"https://github.com/mishamoskalenko/blogging-platform"}
             />
             <ProjectItem
               title={"Calendar"}
@@ -87,6 +89,7 @@ export default function Home() {
               image={"/calendar.png"}
               alt={"Screenshot of the 'Calendar' web application, showing a grid of events."}
               href={'https://mishamoskalenko.github.io/calendar'}
+              gitHubHref={"https://github.com/mishamoskalenko/calendar"}
             />
             <ProjectItem
               title={"Cryptopin"}
@@ -94,6 +97,7 @@ export default function Home() {
               image={"/cryptopin.png"}
               alt={"Screenshot of the 'Cryptopin' website, displaying a list of cryptocurrencies with their prices."}
               href={'https://mishamoskalenko.github.io/cryptopin'}
+              gitHubHref={"https://github.com/mishamoskalenko/cryptopin"}
             />
             <ProjectItem
               title={"Weather app"}
@@ -101,6 +105,7 @@ export default function Home() {
               image={"/weather.png"}
               alt={"Screenshot of the 'Weather app', showing the weather forecast for a specific city."}
               href={'https://mishamoskalenko.github.io/weather-app'}
+              gitHubHref={"https://github.com/mishamoskalenko/weather-app"}
             />
             <ProjectItem
               title={"Drink"}
@@ -108,6 +113,7 @@ export default function Home() {
               image={"/drink.png"}
               alt={"Screenshot of the 'Drink' website, a landing page for selling coffee drinks."}
               href={'https://mishamoskalenko.github.io/Drink'}
+              gitHubHref={"https://github.com/mishamoskalenko/Drink"}
             />
             <ProjectItem
               title={"Cat energy"}
@@ -115,6 +121,7 @@ export default function Home() {
               image={"/cat.png"}
               alt={"Screenshot of the 'Cat energy' website, a landing page for selling cat food."}
               href={'https://mishamoskalenko.github.io/cat-energy'}
+              gitHubHref={" https://github.com/mishamoskalenko/cat-energy"}
             />
           </ul>
         </section>

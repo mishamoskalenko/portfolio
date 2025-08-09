@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import styles from "./ProjectItem.module.scss"
 
 interface ProjectItemProps {
     title: string;
@@ -8,13 +9,14 @@ interface ProjectItemProps {
     image: string;
     alt: string;
     href: string;
+    gitHubHref?: string;
 }
 
 export const ProjectItem = (props: ProjectItemProps) => {
-    const { title, description, image, href, alt } = props;
+    const { title, description, image, href, alt, gitHubHref } = props;
     return (
         <motion.li
-            className="projects-list__item"
+            className={styles.item}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15, margin: "0px 0px -5% 0px" }}
@@ -24,19 +26,32 @@ export const ProjectItem = (props: ProjectItemProps) => {
             style={{ willChange: "transform, opacity", backfaceVisibility: "hidden" }}
         >
             <div>
-                <Image className="projects-list__image" src={image} alt={alt} width={702.5} height={350} />
+                <Image className={styles.image} src={image} alt={alt} width={702.5} height={350} />
             </div>
-            <div className="projects-list__text">
-                <h3 className="projects-list__title">{title}</h3>
-                <p className="projects-list__description">{description}</p>
-                <a
-                    className="projects-list__button"
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View
-                </a>
+            <div className={styles.text}>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.description}>{description}</p>
+                <div className={styles.group}>
+                    <a
+                        className={styles.button}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View
+                    </a>
+                    {gitHubHref &&
+                        <a
+                            className={`${styles.button} ${styles.button_github}`}
+                            href={gitHubHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                    }
+                </div>
+
             </div>
         </motion.li>
     );

@@ -8,3 +8,11 @@
     padding: 12px 0px 47px 0px;
   }
 }
+
+.page__section{
+  @media (min-width: $breakpoint-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}

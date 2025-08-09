@@ -1,15 +1,6 @@
-@use "../global/variables" as *;
+@use "../../../sass/global/variables.scss" as *;
 
-.projects-list{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.projects-list__item{
+.item{
   color: #FFFFFF;
   margin: 5px;
   padding: 16px;
@@ -28,7 +19,7 @@
   }
 }
 
-.projects-list__image{
+.image{
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   @media (max-width: $breakpoint-mobile) {
@@ -39,7 +30,7 @@
   }
 }
 
-.projects-list__title{
+.title{
   font-family: "Gilroy";
   font-size: 25px;
   font-style: normal;
@@ -60,7 +51,7 @@
   }
 }
 
-.projects-list__description{
+.description{
   font-family: "Gilroy";
   font-size: 16px;
   font-style: normal;
@@ -80,8 +71,7 @@
   }
 }
 
-
-.projects-list__button{
+.button{
   font-family: "Gilroy";
   font-size: 16px;
   font-style: normal;
@@ -106,25 +96,39 @@
 }
 
 @media (hover: hover) {
-  .projects-list__button:hover{
+  .button:hover{
     transition: 0.3s;
     background-color: #3f07d8;
   }
 }
 
-.projects-list__text{
+.text{
   @media (max-width: 1439px) {
     text-align: center;
   }
 }
 
 @media (hover: hover) {
-  .projects-list__item:hover {
+  .item:hover {
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 255, 255, 0.14);
   }
-  .projects-list__item:hover .projects-list__image {
+  .item:hover .image {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   }
 }
 
+.group{
+  display: flex;
+  gap: 10px;
+}
+
+.button_github{
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+.button_github:hover{
+  transition: 0.3s;
+  background-color: #e0e0e0;
+}
