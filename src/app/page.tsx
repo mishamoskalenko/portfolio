@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 
 export default function Home() {
   const skills = [
-    "HTML", "CSS", "SCSS", "JavaScript", "Typescript", "React", "React Router", "Redux Toolkit", "GIT", "Axios", "Webpack", "Vite", "i18n", "Babel", "Jest", "RTL", "Cypress", "Loki", "Storybook", "GitHub", "GitHub Actions", "ESLint", "Stylelint", "English(B2)"
+    "HTML", "CSS", "SCSS", "JavaScript", "Typescript", "React", "Next.js", "GIT", "React Router", "Axios", "Redux Toolkit", "i18n", "Webpack", "Vite", "Babel", "Jest", "RTL", "Cypress", "Loki", "Storybook", "GitHub", "Stylelint", "GitHub Actions", "ESLint", "English(B2)"
   ]
 
   return (
@@ -26,8 +26,7 @@ export default function Home() {
           <motion.div className="catalog__portfolio portfolio" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.3 }}>
             <div className="portfolio__container">
               <p className="portfolio__title">Resume</p>
-              <a className="portfolio__link" href="Mykhailo_Moskalenko_CV.pdf" target="_blank"
-                rel="noopener noreferrer">View Resume</a>
+              <a className="portfolio__link" href="Mykhailo_Moskalenko_CV.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
             </div>
           </motion.div>
         </div>
@@ -76,9 +75,16 @@ export default function Home() {
           <h2 className="projects__title">My projects</h2>
           <ul className="projects__list">
             <ProjectItem
+              title={"Motion Designer Portfolio — Production Project"}
+              description={"Motion Designer Portfolio using Next.JS, TypeScript, i18n and Framer-motion "}
+              image={"/projects/motion.png"}
+              alt={"Screenshot of the main page of the 'Motion Designer Portfolio'."}
+              href={'https://motion-designer.vercel.app/en'}
+            />
+            <ProjectItem
               title={"Blogging platform"}
               description={"Blogging platform web application using React, TypeScript, Redux Toolkit(RTK Query), React Router, Axios, SCSS Modules, i18next, Headless UI, Webpack, Vite, Storybook, Jest, React Testing Library & Cypress"}
-              image={"/blogging-platform.png"}
+              image={"/projects/blogging-platform.png"}
               alt={"Screenshot of the main page of the 'Blogging platform' web application."}
               href={'https://mishablogging-platform.netlify.app'}
               gitHubHref={"https://github.com/mishamoskalenko/blogging-platform"}
@@ -86,7 +92,7 @@ export default function Home() {
             <ProjectItem
               title={"Calendar"}
               description={"Calendar web application using React, Typescript, Redux Toolkit, React Router, Axios, Ant design"}
-              image={"/calendar.png"}
+              image={"/projects/calendar.png"}
               alt={"Screenshot of the 'Calendar' web application, showing a grid of events."}
               href={'https://mishamoskalenko.github.io/calendar'}
               gitHubHref={"https://github.com/mishamoskalenko/calendar"}
@@ -94,7 +100,7 @@ export default function Home() {
             <ProjectItem
               title={"Cryptopin"}
               description={"Cryptocurrency website with token tracker using React, React Router, Axios"}
-              image={"/cryptopin.png"}
+              image={"/projects/cryptopin.png"}
               alt={"Screenshot of the 'Cryptopin' website, displaying a list of cryptocurrencies with their prices."}
               href={'https://mishamoskalenko.github.io/cryptopin'}
               gitHubHref={"https://github.com/mishamoskalenko/cryptopin"}
@@ -102,7 +108,7 @@ export default function Home() {
             <ProjectItem
               title={"Weather app"}
               description={"Find out the weather app using React, Axios"}
-              image={"/weather.png"}
+              image={"/projects/weather.png"}
               alt={"Screenshot of the 'Weather app', showing the weather forecast for a specific city."}
               href={'https://mishamoskalenko.github.io/weather-app'}
               gitHubHref={"https://github.com/mishamoskalenko/weather-app"}
@@ -110,7 +116,7 @@ export default function Home() {
             <ProjectItem
               title={"Drink"}
               description={"Selling coffee drinks website using HTML, SCSS, Gulp"}
-              image={"/drink.png"}
+              image={"/projects/drink.png"}
               alt={"Screenshot of the 'Drink' website, a landing page for selling coffee drinks."}
               href={'https://mishamoskalenko.github.io/Drink'}
               gitHubHref={"https://github.com/mishamoskalenko/Drink"}
@@ -118,7 +124,7 @@ export default function Home() {
             <ProjectItem
               title={"Cat energy"}
               description={"Selling cat food website using HTML, SCSS, Gulp"}
-              image={"/cat.png"}
+              image={"/projects/cat.png"}
               alt={"Screenshot of the 'Cat energy' website, a landing page for selling cat food."}
               href={'https://mishamoskalenko.github.io/cat-energy'}
               gitHubHref={" https://github.com/mishamoskalenko/cat-energy"}

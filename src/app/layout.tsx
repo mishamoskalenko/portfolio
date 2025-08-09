@@ -18,10 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
         <link rel="icon" href="/favicon/32.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon/180.png" />
-        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="manifest" href="/favicon/manifest.webmanifest" />
       </head>
       <body>
         {children}
