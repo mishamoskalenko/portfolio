@@ -15,7 +15,7 @@ export default function Home() {
       <header className="page__header header">
         <div className="header__catalog catalog">
           <motion.div className="catalog__image" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.1 }}>
-            <Image src="/avatar-1.png" alt="Mykhailo Moskalenko's avatar" width={750} height={750} priority />
+            <Image src="/avatar.png" alt="Mykhailo Moskalenko's avatar" width={750} height={750} priority />
           </motion.div>
           <motion.div className="catalog__description description" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.2 }}>
             <div className="description__container">

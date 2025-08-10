@@ -51,7 +51,6 @@ export const ProjectItem = (props: ProjectItemProps) => {
                         </a>
                     }
                 </div>
-
             </div>
         </motion.li>
     );
