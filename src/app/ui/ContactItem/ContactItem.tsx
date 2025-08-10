@@ -29,7 +29,7 @@ export const ContactItem = (props: ContactItemProps) => {
             transition={{ duration: 0.3, delay }}
             style={{ willChange: "transform, opacity", backfaceVisibility: "hidden" }}
         >
-            <Image src={image} alt="" width={40} height={40} />
+            <Image className={styles.image} src={image} alt="" width={40} height={40} />
             <p className={styles.info_text}>
                 {text}
             </p>

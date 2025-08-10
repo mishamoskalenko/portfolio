@@ -21,6 +21,10 @@
   }
 }
 
+.info_item:nth-child(2) .image {
+  transform: translateX(5px) translateY(2px); 
+}
+
 .info_item:hover{
   transition: 0.3s;
   background-color: #e0e0e0;
@@ -35,4 +39,10 @@
   color: #000000;
   text-decoration: none;
   width: 100%;
+}
+
+.info_item:nth-child(5) .info_text{
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+  }
 }

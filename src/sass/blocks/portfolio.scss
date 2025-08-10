@@ -61,9 +61,10 @@
   text-transform: uppercase;
   color: #0047FF;
   @media (max-width: $breakpoint-mobile) {
+    display: block;
     font-size: 33px;
     text-align: center;
-    margin-bottom: 10px
+    margin-bottom: 5px
   }
 }
 
