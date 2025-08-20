@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 
 export default function Home() {
   const skills = [
-    "HTML", "CSS", "SCSS", "JavaScript", "Typescript", "React", "Next.js", "GIT", "React Router", "Axios", "Redux Toolkit", "i18n", "Webpack", "Vite", "Babel", "Jest", "RTL", "Cypress", "Loki", "Storybook", "GitHub", "Stylelint", "GitHub Actions", "ESLint", "English(B2)"
+    "HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React", "Next.js", "Git", "React Router", "Axios", "Redux Toolkit", "i18n", "Webpack", "Vite", "Babel", "Jest", "RTL", "Cypress", "Loki", "Storybook", "GitHub", "Stylelint", "GitHub Actions", "ESLint", "Framer Motion", "English (B2)"
   ]
 
   return (
@@ -15,12 +15,12 @@ export default function Home() {
       <header className="page__header header">
         <div className="header__catalog catalog">
           <motion.div className="catalog__image" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.1 }}>
-            <Image src="/avatar.png" alt="Mykhailo Moskalenko's avatar" width={750} height={750} priority />
+            <Image src="/avatar.png" alt="Portrait of Mykhailo Moskalenko, Frontend Developer" width={750} height={750} priority />
           </motion.div>
           <motion.div className="catalog__description description" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.2 }}>
             <div className="description__container">
               <h2 className="description__title">Frontend Developer</h2>
-              <ReactTyped className="description__subtitle" typeSpeed={60} strings={["simple, stylish and logical",]} />
+              <ReactTyped className="description__subtitle" typeSpeed={60} strings={["simple, stylish, and logical",]} />
             </div>
           </motion.div>
           <motion.div className="catalog__portfolio portfolio" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -35,10 +35,10 @@ export default function Home() {
         <motion.h1 className="info__title" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15, margin: "0px 0px -5% 0px" }} transition={{ duration: 0.3 }} style={{ willChange: "transform, opacity", backfaceVisibility: "hidden" }}>Mykhailo Moskalenko</motion.h1>
         <ul className="info__list">
           <ContactItem text={"Rouen, France"} image={"/location.svg"} delay={0} />
-          <ContactItem text={"+33 7 80 45 07 93"} image={"/phone.svg"} delay={0.06} />
+          <ContactItem text={"+33 7 80 45 07 93"} image={"/phone.svg"} href="tel:+33780450793" delay={0.06} />
           <ContactItem text={"GitHub"} image={"/github.svg"} href="https://github.com/mishamoskalenko" delay={0.12} />
           <ContactItem text={"LinkedIn"} image={"/linkedin.svg"} href="https://www.linkedin.com/in/mykhailo-moskalenko" delay={0.18} />
-          <ContactItem text={"misamoskalenko318@gmail.com"} image={"/mail.svg"} delay={0.24} />
+          <ContactItem text={"misamoskalenko318@gmail.com"} image={"/mail.svg"} href="mailto:misamoskalenko318@gmail.com" delay={0.24} />
         </ul>
         <section className="page__section stats">
           <motion.div className="stats__profile profile" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
@@ -75,59 +75,59 @@ export default function Home() {
           <h2 className="projects__title">My projects</h2>
           <ul className="projects__list">
             <ProjectItem
-              title={"Motion Designer Portfolio — Production Project"}
-              description={"Motion Designer Portfolio using Next.JS, TypeScript, i18n and Framer-motion "}
+              title={"Motion Designer Portfolio"}
+              description={"Portfolio website for a motion designer. Built with Next.js, TypeScript, i18next, and Framer Motion."}
               image={"/projects/motion.png"}
-              alt={"Screenshot of the main page of the 'Motion Designer Portfolio'."}
+              alt={"Motion Designer portfolio — homepage screenshot"}
               href={'https://motion-designer.vercel.app/en'}
             />
             <ProjectItem
-              title={"Blogging platform"}
-              description={"Blogging platform web application using React, TypeScript, Redux Toolkit(RTK Query), React Router, Axios, SCSS Modules, i18next, Headless UI, Webpack, Vite, Storybook, Jest, React Testing Library & Cypress"}
+              title={"Blogging Platform"}
+              description={"Blogging platform. Built with React, TypeScript, Redux Toolkit (RTK Query), React Router, SCSS Modules, i18next, and Headless UI. Tested with Jest, React Testing Library, and Cypress."}
               image={"/projects/blogging-platform.png"}
-              alt={"Screenshot of the main page of the 'Blogging platform' web application."}
+              alt={"Blogging platform — homepage screenshot"}
               href={'https://mishablogging-platform.netlify.app'}
               gitHubHref={"https://github.com/mishamoskalenko/blogging-platform"}
             />
             <ProjectItem
               title={"Calendar"}
-              description={"Calendar web application using React, Typescript, Redux Toolkit, React Router, Axios, Ant design"}
+              description={"Calendar app. Built with React, TypeScript, Redux Toolkit, React Router, Axios, and Ant Design."}
               image={"/projects/calendar.png"}
-              alt={"Screenshot of the 'Calendar' web application, showing a grid of events."}
+              alt={"Calendar app — month grid with events"}
               href={'https://mishamoskalenko.github.io/calendar'}
               gitHubHref={"https://github.com/mishamoskalenko/calendar"}
             />
             <ProjectItem
               title={"Cryptopin"}
-              description={"Cryptocurrency website with token tracker using React, React Router, Axios"}
+              description={"Cryptocurrency tracker with live token data. Built with React, React Router, and Axios."}
               image={"/projects/cryptopin.png"}
-              alt={"Screenshot of the 'Cryptopin' website, displaying a list of cryptocurrencies with their prices."}
+              alt={"Cryptocurrency tracker — tokens and prices"}
               href={'https://mishamoskalenko.github.io/cryptopin'}
               gitHubHref={"https://github.com/mishamoskalenko/cryptopin"}
             />
             <ProjectItem
               title={"Weather app"}
-              description={"Find out the weather app using React, Axios"}
+              description={"Weather app built with React and Axios."}
               image={"/projects/weather.png"}
-              alt={"Screenshot of the 'Weather app', showing the weather forecast for a specific city."}
+              alt={"Weather app — city forecast screen"}
               href={'https://mishamoskalenko.github.io/weather-app'}
               gitHubHref={"https://github.com/mishamoskalenko/weather-app"}
             />
             <ProjectItem
               title={"Drink"}
-              description={"Selling coffee drinks website using HTML, SCSS, Gulp"}
+              description={"Coffee drinks landing page. Built with HTML, SCSS, and Gulp."}
               image={"/projects/drink.png"}
-              alt={"Screenshot of the 'Drink' website, a landing page for selling coffee drinks."}
+              alt={"Coffee drinks landing page — hero section"}
               href={'https://mishamoskalenko.github.io/Drink'}
               gitHubHref={"https://github.com/mishamoskalenko/Drink"}
             />
             <ProjectItem
-              title={"Cat energy"}
-              description={"Selling cat food website using HTML, SCSS, Gulp"}
+              title={"Cat Energy"}
+              description={"Cat food landing page. Built with HTML, SCSS, and Gulp."}
               image={"/projects/cat.png"}
-              alt={"Screenshot of the 'Cat energy' website, a landing page for selling cat food."}
+              alt={"Cat Energy landing page — hero section"}
               href={'https://mishamoskalenko.github.io/cat-energy'}
-              gitHubHref={" https://github.com/mishamoskalenko/cat-energy"}
+              gitHubHref={"https://github.com/mishamoskalenko/cat-energy"}
             />
           </ul>
         </section>

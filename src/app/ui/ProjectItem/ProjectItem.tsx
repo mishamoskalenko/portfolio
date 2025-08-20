@@ -38,7 +38,7 @@ export const ProjectItem = (props: ProjectItemProps) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        View
+                        Live Demo
                     </a>
                     {gitHubHref &&
                         <a
