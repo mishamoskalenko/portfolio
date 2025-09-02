@@ -75,11 +75,19 @@ export default function Home() {
           <h2 className="projects__title">My projects</h2>
           <ul className="projects__list">
             <ProjectItem
+              title={"French Cards Generator"}
+              description={"AI flashcard generator web app. Built with Next.js, TypeScript, Redux Toolkit and i18next."}
+              image={"/projects/french.png"}
+              alt={"French Cards Generator — learned words screenshot"}
+              href={'https://frenchcardsgenerator.vercel.app'}
+              gitHubHref={"https://github.com/mishamoskalenko/french-cards-generator"}
+            />
+            <ProjectItem
               title={"Motion Designer Portfolio"}
               description={"Portfolio website for a motion designer. Built with Next.js, TypeScript, i18next, and Framer Motion."}
               image={"/projects/motion.png"}
               alt={"Motion Designer portfolio — homepage screenshot"}
-              href={'https://motion-designer.vercel.app/en'}
+              href={'https://motion-designer.vercel.app'}
             />
             <ProjectItem
               title={"Blogging Platform"}
